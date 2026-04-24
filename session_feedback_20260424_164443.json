@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "name": "Cassidy",
+      "attendance": "Arrived on time",
+      "participation": {
+        "perseveredWithTasks": "More than 75% of the time",
+        "listenedActively": "Approximately 50% of the time",
+        "participatedInDiscussions": "Approximately 50% of the time"
+      },
+      "studentUnderstandings": "Cassidy engaged with the number line activity and explained that having two pieces is what makes halves. She participated in skip counting fractions and contributed to the group discussion."
+    },
+    {
+      "name": "Bristol",
+      "attendance": "Arrived on time",
+      "participation": {
+        "perseveredWithTasks": "Approximately 50% of the time",
+        "listenedActively": "Approximately 50% of the time",
+        "participatedInDiscussions": "Approximately 50% of the time"
+      },
+      "studentUnderstandings": "Bristol thought about using blocks to space out the number line and suggested labeling a point as one third. She practiced identifying denominators and worked on skip counting fractions with the group."
+    },
+    {
+      "name": "Leighton",
+      "attendance": "Arrived on time",
+      "participation": {
+        "perseveredWithTasks": "More than 75% of the time",
+        "listenedActively": "More than 75% of the time",
+        "participatedInDiscussions": "Approximately 50% of the time"
+      },
+      "studentUnderstandings": "Leighton suggested using blocks to divide the number line and helped move the boxes to find the correct placement for fractions. He participated in the fraction skip counting exercises with the group."
+    }
+  ],
+  "internalFeedback": {
+    "lessonTitle": "Cignition: Fractions on a Number Line (3.NF.A.2)",
+    "slideRange": "Slides 4-9"
+  },
+  "talkTimeAnalysis": {
+    "metrics": "Tutor: 29 min 56 sec (94.1%), Student 1: 1 min 53 sec (5.9%)",
+    "flag": "Tutor talk time significantly exceeded the recommended threshold. Aim for less than 70% tutor talk time to increase student participation."
+  }
+}

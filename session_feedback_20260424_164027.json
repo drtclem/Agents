@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "name": "Cassidy",
+      "attendance": "Arrived on time",
+      "participation": {
+        "perseveredWithTasks": "Approximately 50% of the time",
+        "listenedActively": "Approximately 50% of the time",
+        "participatedInDiscussions": "Approximately 50% of the time"
+      },
+      "studentUnderstandings": "Cassidy contributed to group discussions by sharing1714 ideas about partitioning number lines and labeling fractions. She worked on explaining answers and skip counting by halves and sixths in the session."
+    },
+    {
+      "name": "Bristol",
+      "attendance": "Arrived on time",
+      "participation": {
+        "perseveredWithTasks": "Approximately 50% of the time",
+        "listenedActively": "Approximately 50% of the time",
+        "participatedInDiscussions": "Approximately 50% of the time"
+      },
+      "studentUnderstandings": "Bristol participated in the session by suggesting ideas for fractions and wrote on the Jamboard when asked. She worked on understanding denominators and skip counting by fractions."
+    },
+    {
+      "name": "Leighton",
+      "attendance": "Arrived on time",
+      "participation": {
+        "perseveredWithTasks": "Approximately 50% of the time",
+        "listenedActively": "Approximately 50% of the time",
+        "participatedInDiscussions": "Approximately 50% of the time"
+      },
+      "studentUnderstandings": "Leighton engaged with 1499 the lesson by suggesting the use of blocks to evenly space points on the number line. He helped place fractions and worked on understanding denominators and skip counting."
+    }
+  ],
+  "internalFeedback": {
+    "lessonTitle": "Cignition: Fractions on a Number Line (3.NF.A.2)",
+    "slideRange": "Slides 4-9"
+  },
+  "talkTimeAnalysis": {
+    "metrics": "Tutor: 29 min 56 sec (94.1%), Student 1: 1 min 53 sec (5.9%)",
+    "flag": "Tutor talk time is 94.1%, significantly exceeding the 70% threshold. Consider strategies to increase student talk time, such as cold calling, structured turn-taking, and silent think time followed by student explanations."
+  }
+}

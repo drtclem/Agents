@@ -68,6 +68,11 @@ def format_metrics(talk_time, word_count):
     
     return "\n".join(metrics)
 
+def is_absent_session(word_count):
+    student_words = sum(words for speaker, words in word_count.items() 
+                       if speaker.lower() != "tutor")
+    return student_words < 20
+
 
 import json
 from datetime import datetime
@@ -112,6 +117,8 @@ Important rules:
 - For attendance: a student is 'Arrived on time' if they speak early in the session, 'Late arrival' if they first speak significantly after the session begins, 'Early leave' if they stop participating well before the session ends
 - For student names: use exactly the names as they appear in the transcript
 - The students in this session are provided at the top of the input. Generate feedback for each one.
+- Do not include any numbers, codes, or identifiers within sentences — numbers should only appear in the talk time metrics section
+- Do not use gendered pronouns (he/she/his/her). Use the student's name or "they/them" instead.
 
 1. For each student:
    - Attendance status (Arrived on time / Late arrival / Early leave / Absent)
@@ -155,16 +162,27 @@ Output your response as valid JSON only, with no additional text, reasoning, or 
     ("human", "Here is the transcript:\n\n{transcript}"),
 ])
 
+
 chain = prompt | llm | StrOutputParser()
 
 student_names = input("Enter student names separated by commas: ")
 
 lines, talk_time, word_count = load_transcript("Austin(sub)_Lexington_Lesson6mixed_8_45_Part1_11_18_21.xlsx")
-metrics = format_metrics(talk_time, word_count)
-transcript_text = "\n".join(lines)
 
-full_input = f"Students in this session: {student_names}\n\n{metrics}\n\nTRANSCRIPT:\n{transcript_text}"
-
-
-response = chain.invoke({"transcript": full_input})
-save_output(response, student_names)
+if is_absent_session(word_count):
+    print("No student participation detected. Marking all students as absent.")
+    absent_output = {
+        "students": [
+            {"name": name.strip(), "attendance": "Absent", "participation": {}, "studentUnderstandings": ""}
+            for name in student_names.split(",")
+        ],
+        "internalFeedback": {"lessonTitle": "", "slideRange": ""},
+        "talkTimeAnalysis": {"metrics": "", "flag": ""}
+    }
+    save_output(json.dumps(absent_output), student_names)
+else:
+    metrics = format_metrics(talk_time, word_count)
+    transcript_text = "\n".join(lines)
+    full_input = f"Students in this session: {student_names}\n\n{metrics}\n\nTRANSCRIPT:\n{transcript_text}"
+    response = chain.invoke({"transcript": full_input})
+    save_output(response, student_names)
