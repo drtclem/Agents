@@ -8,7 +8,7 @@
         "listenedActively": "Approximately 50% of the time",
         "participatedInDiscussions": "Approximately 50% of the time"
       },
-      "studentUnderstandings": "Cassidy participated in our fraction number line session today. They helped explain how to partition a number line into halves and worked on labeling fractions correctly. Cassidy contributed to identifying that four halves equals two wholes and shared their thinking when discussing the placement of fractions on the number line."
+      "studentUnderstandings": "Cassidy participated in group tutoring today. Cassidy made connections between fractions and whole numbers, showing an understanding of denominators and how many parts make a whole. Cassidy practiced identifying fractions on a number line and engaged in discussions about the reasoning behind fraction placement."
     },
     {
       "name": "Bristol",
@@ -18,7 +18,7 @@
         "listenedActively": "Approximately 50% of the time",
         "participatedInDiscussions": "Approximately 50% of the time"
       },
-      "studentUnderstandings": "Bristol worked with fractions on a number line in today's session. They served as the writer for one activity and offered ideas about denominators when labeling fractions. Bristol participated in skip counting by halves and identifying equivalent fractions during our collaborative work."
+      "studentUnderstandings": "Bristol participated in group tutoring today. Bristol worked on understanding fractions on a number line, exploring how many parts make a whole. Bristol practiced explaining reasoning and collaborated on placing and labeling fractions such as halves and fourths on a number line."
     },
     {
       "name": "Leighton",
@@ -28,7 +28,7 @@
         "listenedActively": "Approximately 50% of the time",
         "participatedInDiscussions": "Approximately 50% of the time"
       },
-      "studentUnderstandings": "Leighton engaged with fraction concepts using a number line today. They suggested using blocks to create equal spaces when partitioning and helped adjust Anna's number line to show the correct placement for one whole. Leighton contributed to counting spaces and determining denominators in our fraction work."
+      "studentUnderstandings": "Leighton participated in group tutoring today. Leighton shared ideas about using shapes to partition number lines into equal pieces. Leighton practiced identifying denominators and counting fractional jumps, contributing to group discussion and problem-solving for fractions on a number line."
     }
   ],
   "internalFeedback": {
@@ -37,6 +37,6 @@
   },
   "talkTimeAnalysis": {
     "metrics": "Tutor: 29 min 56 sec (94.1%), Student 1: 1 min 53 sec (5.9%)",
-    "flag": "Tutor talk time exceeded 70%. Consider strategies to increase student talk time."
+    "flag": "Tutor talk time exceeds 70%. More student talk time should be encouraged."
   }
 }
