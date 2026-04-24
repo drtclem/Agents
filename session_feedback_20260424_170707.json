@@ -8,7 +8,7 @@
         "listenedActively": "Approximately 50% of the time",
         "participatedInDiscussions": "Approximately 50% of the time"
       },
-      "studentUnderstandings": "Cassidy contributed to group discussions by sharing1714 ideas about partitioning number lines and labeling fractions. She worked on explaining answers and skip counting by halves and sixths in the session."
+      "studentUnderstandings": "Cassidy participated in our fraction number line session today. They helped explain how to partition a number line into halves and worked on labeling fractions correctly. Cassidy contributed to identifying that four halves equals two wholes and shared their thinking when discussing the placement of fractions on the number line."
     },
     {
       "name": "Bristol",
@@ -18,7 +18,7 @@
         "listenedActively": "Approximately 50% of the time",
         "participatedInDiscussions": "Approximately 50% of the time"
       },
-      "studentUnderstandings": "Bristol participated in the session by suggesting ideas for fractions and wrote on the Jamboard when asked. She worked on understanding denominators and skip counting by fractions."
+      "studentUnderstandings": "Bristol worked with fractions on a number line in today's session. They served as the writer for one activity and offered ideas about denominators when labeling fractions. Bristol participated in skip counting by halves and identifying equivalent fractions during our collaborative work."
     },
     {
       "name": "Leighton",
@@ -28,7 +28,7 @@
         "listenedActively": "Approximately 50% of the time",
         "participatedInDiscussions": "Approximately 50% of the time"
       },
-      "studentUnderstandings": "Leighton engaged with 1499 the lesson by suggesting the use of blocks to evenly space points on the number line. He helped place fractions and worked on understanding denominators and skip counting."
+      "studentUnderstandings": "Leighton engaged with fraction concepts using a number line today. They suggested using blocks to create equal spaces when partitioning and helped adjust Anna's number line to show the correct placement for one whole. Leighton contributed to counting spaces and determining denominators in our fraction work."
     }
   ],
   "internalFeedback": {
@@ -37,6 +37,6 @@
   },
   "talkTimeAnalysis": {
     "metrics": "Tutor: 29 min 56 sec (94.1%), Student 1: 1 min 53 sec (5.9%)",
-    "flag": "Tutor talk time is 94.1%, significantly exceeding the 70% threshold. Consider strategies to increase student talk time, such as cold calling, structured turn-taking, and silent think time followed by student explanations."
+    "flag": "Tutor talk time exceeded 70%. Consider strategies to increase student talk time."
   }
 }

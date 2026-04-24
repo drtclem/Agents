@@ -4,6 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import openpyxl
+import re
 
 load_dotenv()
 
@@ -80,13 +81,18 @@ from datetime import datetime
 def save_output(response_text, student_names):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     base_filename = f"session_feedback_{timestamp}"
-    
-    # Save raw JSON
-    data = json.loads(response_text)
+
+    try:
+        data = json.loads(response_text)
+    except json.JSONDecodeError:
+        print("Warning: LLM returned invalid JSON. Saving raw response.")
+        with open(f"{base_filename}_raw.txt", "w") as f:
+            f.write(response_text)
+        return
+
     with open(f"{base_filename}.json", "w") as f:
         json.dump(data, f, indent=2)
-    
-    # Save markdown
+
     with open(f"{base_filename}.md", "w") as f:
         f.write("# Session Feedback\n\n")
         for student in data["students"]:
@@ -102,10 +108,10 @@ def save_output(response_text, student_names):
         f.write(f"## Talk Time Analysis\n")
         f.write(f"{data['talkTimeAnalysis']['metrics']}\n\n")
         f.write(f"**Note:** {data['talkTimeAnalysis']['flag']}\n")
-    
+
     print(f"Saved: {base_filename}.json and {base_filename}.md")
-
-
+    
+    
 prompt = ChatPromptTemplate.from_messages([
     ("system", """You are an assistant that helps tutors at Cignition complete their session feedback.
 Given a tutoring session transcript, you will produce:
@@ -169,6 +175,15 @@ student_names = input("Enter student names separated by commas: ")
 
 lines, talk_time, word_count = load_transcript("Austin(sub)_Lexington_Lesson6mixed_8_45_Part1_11_18_21.xlsx")
 
+
+
+def clean_response(text):
+    # Remove numbers that are stuck inside or immediately after words
+    text = re.sub(r'(?<=[a-zA-Z])\d+', '', text)
+    # Remove numbers that are immediately before words
+    text = re.sub(r'\d+(?=[a-zA-Z])', '', text)
+    return text
+
 if is_absent_session(word_count):
     print("No student participation detected. Marking all students as absent.")
     absent_output = {
@@ -185,4 +200,5 @@ else:
     transcript_text = "\n".join(lines)
     full_input = f"Students in this session: {student_names}\n\n{metrics}\n\nTRANSCRIPT:\n{transcript_text}"
     response = chain.invoke({"transcript": full_input})
+    response = clean_response(response)
     save_output(response, student_names)
