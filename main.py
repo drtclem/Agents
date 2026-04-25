@@ -231,7 +231,7 @@ student_names = input("Enter student names separated by commas: ")
 
 # Load and parse the transcript
 # TODO: replace hardcoded filename with Zoom API call when ready
-lines, talk_time, word_count = load_transcript("Austin(sub)_Lexington_Lesson6mixed_8_45_Part1_11_18_21.xlsx")
+lines, talk_time, word_count = load_transcript("Sample_Lexington_Lesson1_fractions_9_00_Part1.xlsx")
 
 if is_absent_session(word_count):
     # Skip the LLM entirely — just mark everyone absent
